@@ -1,0 +1,44 @@
+/* ===== Reset básico ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* ===== Contenedor flexible en fila ===== */
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* ===== Cajas del modelo ===== */
+.container article {
+    width: 30%;
+    height: 150px;
+    border: 3px solid #333;
+    border-radius: 8px;
+}
+
+/* Colores para diferenciar cada caja */
+.caja1 { background-color: #FFB3BA; }
+.caja2 { background-color: #FFDFBA; }
+.caja3 { background-color: #FFFFBA; }
+.caja4 { background-color: #BAFFC9; }
+.caja5 { background-color: #BAE1FF; }
+.caja6 { background-color: #E0BBE4; }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .container article {
+        width: 100%;
+    }
+}

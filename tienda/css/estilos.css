@@ -1,0 +1,103 @@
+/* ===== Reset básico ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+/* ===== Contenido general (flex column) ===== */
+#contenido {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Títulos de sección */
+section h1 {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 5px solid coral;
+    color: #333;
+}
+
+/* ===== Contenedor flexible en fila ===== */
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* ===== 1. PRODUCTOS DESTACADOS (2 columnas - 50%) ===== */
+#destacados h1 {
+    text-shadow: 0 0 3px white;
+}
+
+#destacados .contenedor > div {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(255, 255, 0, 0.3);
+}
+
+/* ===== 2. OFERTAS (3 columnas - 33.3%) ===== */
+#ofertas h1 {
+    text-shadow: 1px 1px 2px white, 0 0 30px #D46A6A;
+}
+
+#ofertas .contenedor > div {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    width: 33.3%;
+    box-shadow: 4px 8px;
+}
+
+/* ===== 3. DISPONIBLE (4 columnas - 25%) ===== */
+#disponible .contenedor > div {
+    text-align: center;
+    padding: 10px;
+    border: solid 5px coral;
+    background-color: white;
+    width: 25%;
+    box-shadow: 4px 8px #D46A6A;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    #destacados .contenedor > div,
+    #ofertas .contenedor > div,
+    #disponible .contenedor > div {
+        width: 100%;
+    }
+}
